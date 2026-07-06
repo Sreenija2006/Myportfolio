@@ -4,7 +4,7 @@ A modern, responsive, and professional personal portfolio website showcasing my 
 
 ## 🌐 Live Demo
 
-🔗 https://YOUR-USERNAME.github.io/YOUR-REPOSITORY-NAME/
+🔗https://sreenija2006.github.io/MyPortfolio/
 
 > Replace the above link with your actual GitHub Pages URL.
 
