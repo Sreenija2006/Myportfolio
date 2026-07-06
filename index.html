@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tambireddy Sreenija | Java Full Stack Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#080b16;
+color:white;
+overflow-x:hidden;
+
+}
+
+body.light{
+
+background:#f7f8fc;
+color:#222;
+
+}
+
+section{
+
+padding:100px 10%;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+.container{
+
+width:100%;
+max-width:1200px;
+margin:auto;
+
+}
+
+/* NAVBAR */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(18px);
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+font-weight:700;
+color:#00d9ff;
+
+}
+
+nav ul{
+
+display:flex;
+gap:30px;
+
+}
+
+nav ul li a{
+
+color:white;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+color:#00d9ff;
+
+}
+
+.light nav ul li a{
+
+color:#222;
+
+}
+
+.toggle{
+
+font-size:24px;
+cursor:pointer;
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.hero-content{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
+
+}
+
+.hero-text{
+
+flex:1;
+
+}
+
+.hero-text h3{
+
+font-size:24px;
+font-weight:500;
+
+}
+
+.hero-text h1{
+
+font-size:60px;
+margin:15px 0;
+color:#00d9ff;
+
+}
+
+.hero-text h2{
+
+font-size:32px;
+height:45px;
+
+}
+
+.hero-text p{
+
+margin-top:25px;
+line-height:1.8;
+color:#c7c7c7;
+font-size:17px;
+
+}
+
+.light .hero-text p{
+
+color:#555;
+
+}
+
+.buttons{
+
+margin-top:35px;
+display:flex;
+gap:20px;
+
+}
+
+.btn{
+
+padding:14px 35px;
+border-radius:50px;
+font-weight:600;
+transition:.4s;
+
+}
+
+.primary{
+
+background:#00d9ff;
+color:black;
+
+}
+
+.primary:hover{
+
+transform:translateY(-5px);
+
+}
+
+.secondary{
+
+border:2px solid #00d9ff;
+color:#00d9ff;
+
+}
+
+.secondary:hover{
+
+background:#00d9ff;
+color:black;
+
+}
+
+.hero-image{
+
+flex:1;
+display:flex;
+justify-content:center;
+
+}
+
+.circle{
+
+width:350px;
+height:350px;
+border-radius:50%;
+background:linear-gradient(135deg,#00d9ff,#0047ff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 60px #00d9ff55;
+
+}
+
+.circle i{
+
+font-size:170px;
+color:white;
+
+}
+
+/* ABOUT */
+
+.heading{
+
+text-align:center;
+font-size:40px;
+margin-bottom:60px;
+color:#00d9ff;
+
+}
+
+.about-card{
+
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+padding:40px;
+border-radius:20px;
+line-height:2;
+box-shadow:0 0 20px rgba(0,217,255,.2);
+
+}
+
+.light .about-card{
+
+background:white;
+
+}
+
+/* SKILLS */
+
+.skills{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.skill{
+
+margin-bottom:25px;
+
+}
+
+.skill h4{
+
+margin-bottom:10px;
+
+}
+
+.bar{
+
+height:10px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+
+}
+
+.fill{
+
+height:100%;
+background:#00d9ff;
+width:0%;
+transition:2s;
+
+}
+
+/* PROJECTS */
+
+.projects{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card h3{
+
+margin-bottom:20px;
+color:#00d9ff;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+}
+
+.card a{
+
+display:inline-block;
+margin-top:20px;
+color:#00d9ff;
+font-weight:600;
+
+}
+  /* EXPERIENCE */
+
+.timeline{
+
+position:relative;
+max-width:900px;
+margin:auto;
+
+}
+
+.timeline::before{
+
+content:'';
+position:absolute;
+left:50%;
+width:4px;
+height:100%;
+background:#00d9ff;
+transform:translateX(-50%);
+
+}
+
+.timeline-item{
+
+width:45%;
+padding:20px;
+background:rgba(255,255,255,.05);
+margin:30px 0;
+border-radius:15px;
+position:relative;
+
+}
+
+.timeline-item:nth-child(odd){
+
+left:0;
+
+}
+
+.timeline-item:nth-child(even){
+
+left:55%;
+
+}
+
+.timeline-item h3{
+
+color:#00d9ff;
+margin-bottom:10px;
+
+}
+
+/* EDUCATION */
+
+.education{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+
+}
+
+.edu-card{
+
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:18px;
+transition:.3s;
+
+}
+
+.edu-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.edu-card h3{
+
+color:#00d9ff;
+margin-bottom:15px;
+
+}
+
+/* CERTIFICATIONS */
+
+.cert-list{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+
+}
+
+.cert{
+
+padding:25px;
+background:rgba(255,255,255,.05);
+border-radius:15px;
+font-weight:500;
+
+}
+
+/* CONTACT */
+
+.contact{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+
+}
+
+.contact-box{
+
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:18px;
+
+}
+
+.contact-box h3{
+
+margin-bottom:20px;
+color:#00d9ff;
+
+}
+
+.contact-box p{
+
+margin:15px 0;
+
+}
+
+.contact-box i{
+
+color:#00d9ff;
+margin-right:12px;
+
+}
+
+footer{
+
+padding:30px;
+text-align:center;
+background:#05070f;
+margin-top:70px;
+
+}
+
+.light footer{
+
+background:white;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero-content{
+
+flex-direction:column-reverse;
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:45px;
+
+}
+
+.timeline::before{
+
+left:10px;
+
+}
+
+.timeline-item{
+
+left:25px!important;
+width:90%;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.circle{
+
+width:260px;
+height:260px;
+
+}
+
+.circle i{
+
+font-size:120px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Sreenija.</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<div class="toggle">
+
+<i class="fas fa-moon"></i>
+
+</div>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Tambireddy Sreenija</h1>
+
+<h2><span id="typing"></span></h2>
+
+<p>
+
+Full Stack Java Developer passionate about building secure,
+scalable and user-friendly web applications using Java,
+Servlets, JSP, JDBC and MySQL. Currently learning Spring Boot,
+Hibernate and React.js to become an industry-ready Java Full
+Stack Developer.
+
+</p>
+
+<div class="buttons">
+
+<a href="#projects" class="btn primary">
+View Projects
+</a>
+
+<a href="#contact" class="btn secondary">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="circle">
+
+<i class="fas fa-laptop-code"></i>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="heading">
+About Me
+</h2>
+
+<div class="container">
+
+<div class="about-card">
+
+I am a passionate Java Full Stack Developer from Kadapa,
+Andhra Pradesh. I enjoy solving real-world problems through
+clean, scalable, and secure software solutions.
+
+I have hands-on experience in Java, Servlets, JSP, JDBC,
+MySQL, HTML, CSS and JavaScript. My recent work includes
+building secure authentication systems with OTP verification,
+password encryption using BCrypt, and complete CRUD-based web
+applications.
+
+Currently, I am expanding my skills in Spring Boot,
+Hibernate and React.js while preparing for software developer
+roles.
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="heading">
+Technical Skills
+</h2>
+
+<div class="container skills">
+
+<div>
+
+<div class="skill">
+
+<h4>Java</h4>
+
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<h4>Servlets & JSP</h4>
+
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<h4>JDBC</h4>
+
+<div class="bar">
+<div class="fill" style="width:88%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<h4>MySQL</h4>
+
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<div class="skill">
+
+<h4>HTML</h4>
+
+<div class="bar">
+<div class="fill" style="width:95%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<h4>CSS</h4>
+
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<h4>JavaScript</h4>
+
+<div class="bar">
+<div class="fill" style="width:80%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<h4>Spring Boot (Learning)</h4>
+
+<div class="bar">
+<div class="fill" style="width:65%"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section id="experience">
+
+<h2 class="heading">Experience</h2>
+
+<div class="container">
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>Development of Digital Civic Engagement & Petition Platform</h3>
+
+<h4>Internship 6.0 (B13)</h4>
+
+<p><strong>Feb 2026 – Apr 2026</strong></p>
+
+<p>
+Contributed to the development and analysis of a Digital Civic Engagement &
+Petition Platform. Worked on assignment-based tasks related to citizen
+engagement and petition management while following Software Development
+Life Cycle (SDLC) practices. Improved teamwork, documentation, and
+problem-solving skills.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="heading">Projects</h2>
+
+<div class="container projects">
+
+<div class="card">
+
+<h3>User Authentication System</h3>
+
+<p>
+
+A secure authentication system featuring OTP-based email verification,
+Forgot Password, password reset, resend OTP, expiry validation,
+BCrypt password encryption and real-time password strength checking.
+
+</p>
+
+<p><b>Tech Stack:</b><br>
+Java • Servlets • JSP • JDBC • MySQL • HTML • CSS • JavaScript
+</p>
+
+<a href="https://github.com/Sreenija2006/UserAuthApp" target="_blank">
+
+<i class="fab fa-github"></i> View on GitHub
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Employee Management System</h3>
+
+<p>
+
+Developed a complete CRUD-based Employee Management System using
+Servlets, JSP and JDBC with MySQL integration for efficient employee
+record management.
+
+</p>
+
+<p><b>Tech Stack:</b><br>
+Java • Servlets • JSP • JDBC • MySQL • HTML • CSS • JavaScript
+</p>
+
+<a href="https://github.com/Sreenija2006/Employee-Management-System" target="_blank">
+
+<i class="fab fa-github"></i> View on GitHub
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>Personal Portfolio Website</h3>
+
+<p>
+
+Designed and developed a clean responsive portfolio website to showcase
+projects, skills and certifications using HTML and CSS.
+
+</p>
+
+<p><b>Tech Stack:</b><br>
+HTML • CSS
+
+</p>
+
+<a href="https://github.com/Sreenija2006/Portfolio" target="_blank">
+
+<i class="fab fa-github"></i> View on GitHub
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="education">
+
+<h2 class="heading">Education</h2>
+
+<div class="container education">
+
+<div class="edu-card">
+
+<h3>B.Tech - Computer Science & Engineering</h3>
+
+<p>Sri Venkateswara College of Engineering</p>
+
+<p>2023 – 2027</p>
+
+<h4>CGPA : 8.0</h4>
+
+</div>
+
+<div class="edu-card">
+
+<h3>Intermediate (MPC)</h3>
+
+<p>Sri Hari Junior College</p>
+
+<p>2021 – 2023</p>
+
+<h4>85.3%</h4>
+
+</div>
+
+<div class="edu-card">
+
+<h3>SSC</h3>
+
+<p>Z.P High School, Chitvel</p>
+
+<p>2020 – 2021</p>
+
+<h4>GPA : 8.5</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="certifications">
+
+<h2 class="heading">Certifications</h2>
+
+<div class="container cert-list">
+
+<div class="cert">
+
+<i class="fas fa-certificate"></i>
+
+Frontend Development (HTML, CSS, JavaScript, Angular)
+<br><br>
+Infosys Springboard
+
+</div>
+
+<div class="cert">
+
+<i class="fas fa-certificate"></i>
+
+Java Programming
+<br><br>
+Infosys Springboard
+
+</div>
+
+<div class="cert">
+
+<i class="fas fa-certificate"></i>
+
+Database Management System (DBMS)
+<br><br>
+Infosys Springboard
+
+</div>
+
+</div>
+
+</section>
+<section id="contact">
+
+<h2 class="heading">Contact Me</h2>
+
+<div class="container contact">
+
+<div class="contact-box">
+
+<h3>Get In Touch</h3>
+
+<p><i class="fas fa-envelope"></i> tambireddysreenija@gmail.com</p>
+
+<p><i class="fas fa-phone"></i> +91 73862 28449</p>
+
+<p><i class="fas fa-location-dot"></i> Kadapa, Andhra Pradesh, India</p>
+
+<p>
+<i class="fab fa-linkedin"></i>
+<a href="https://linkedin.com/in/sreenija2006" target="_blank" style="color:#00d9ff;">
+LinkedIn Profile
+</a>
+</p>
+
+<p>
+<i class="fab fa-github"></i>
+<a href="https://github.com/Sreenija2006" target="_blank" style="color:#00d9ff;">
+GitHub Profile
+</a>
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<h3>Career Objective</h3>
+
+<p>
+
+I'm actively looking for Software Developer, Java Full Stack
+Developer and Backend Developer opportunities where I can
+contribute my skills while continuously learning new
+technologies.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Tambireddy Sreenija • Java Full Stack Developer
+
+</p>
+
+</footer>
+
+<script>
+
+// Dark Mode
+
+const toggle=document.querySelector(".toggle");
+
+toggle.onclick=()=>{
+
+document.body.classList.toggle("light");
+
+toggle.innerHTML=document.body.classList.contains("light")
+
+?'<i class="fas fa-sun"></i>'
+
+:'<i class="fas fa-moon"></i>';
+
+};
+
+// Typing Effect
+
+const text=[
+"Java Full Stack Developer",
+"Backend Developer",
+"Problem Solver",
+"Spring Boot Learner"
+];
+
+let i=0;
+let j=0;
+let current="";
+let isDeleting=false;
+
+function type(){
+
+current=text[i];
+
+if(isDeleting){
+
+j--;
+
+}else{
+
+j++;
+
+}
+
+document.getElementById("typing").textContent=current.substring(0,j);
+
+if(!isDeleting && j===current.length){
+
+isDeleting=true;
+
+setTimeout(type,1500);
+
+return;
+
+}
+
+if(isDeleting && j===0){
+
+isDeleting=false;
+
+i++;
+
+if(i===text.length)i=0;
+
+}
+
+setTimeout(type,isDeleting?60:120);
+
+}
+
+type();
+
+
+// Scroll Reveal Animation
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{
+
+opacity:0,
+
+transform:"translateY(60px)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translateY(0)"
+
+}
+
+],{
+
+duration:900,
+
+fill:"forwards"
+
+});
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section,.card,.edu-card,.timeline-item,.cert").forEach(el=>observer.observe(el));
+
+
+// Animate Skill Bars
+
+window.addEventListener("load",()=>{
+
+document.querySelectorAll(".fill").forEach(bar=>{
+
+let width=bar.style.width;
+
+bar.style.width="0";
+
+setTimeout(()=>{
+
+bar.style.width=width;
+
+},500);
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
